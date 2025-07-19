@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* === FULLSCREEN VIDEO === */
+#bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    min-height: 100vh;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -2;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.upper-heading {
+    text-align: center;
+    padding: 2rem 0;
+    color: #fff;
+}
+
+.upper-heading p {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.upper-heading h1 span {
+    color: #0099a8;
+}
+
+/* === LOGIN SECTION === */
+.login-section {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    color: #fff;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-box h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.form-box h1 span {
+    color: #00adb5;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-box input::placeholder {
+    color: #ccc;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #00adb5;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #00adb5;
+}
+
+.form-box button:hover {
+    background: #0099a8;
+    box-shadow: 0 0 20px #00fff7, 0 0 30px #00fff7;
+}
+
+.signup-text {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.signup-text a {
+    color: #00fff7;
+    text-decoration: none;
+    font-weight: bold;
+}
